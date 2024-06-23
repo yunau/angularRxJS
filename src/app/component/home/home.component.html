@@ -1,0 +1,12 @@
+<div>
+    <ul>
+        <li *ngFor="let item of items; let i = index; trackBy: trackByFn">{{ i + 1 }}. {{ item }}</li>
+    </ul>
+</div>
+
+<div class="hero-list" *ngIf="items else loading">
+
+</div>
+<ng-template #loading>
+   <div>Loading...</div>
+</ng-template>
